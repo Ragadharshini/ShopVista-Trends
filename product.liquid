@@ -1,0 +1,25 @@
+<!-- product.liquid -->
+
+<div class="product-container">
+  <div class="product-image">
+    <img src="{{ product.featured_image | image_url : width : 300 }}" alt="{{ product.title }}">
+  </div>
+  <div class="product-details">
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.price | money }}</p>
+    <p>{{ product.description }}</p>
+
+    {% form 'product', product %}
+      <select name="id">
+        {% for variant in product.variants %}
+          <option value="{{ variant.id }}">
+            {{ variant.title }}
+          </option>
+        {% endfor %}
+      </select>
+      <div class="cartbtn">
+        <button type="submit">Add to Bag 🛍️</button>
+      </div>
+    {% endform %}
+  </div>
+</div>

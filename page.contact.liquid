@@ -1,0 +1,42 @@
+<!-- page.contact.liquid -->
+
+<div class="page-container">
+  <h1>{{ page.title }}</h1>
+  <div class="contact-content">
+    <p>{{ page.content }}</p>
+  </div>
+
+  <div class="form-container">
+    {% form 'contact' %}
+      {{ form.errors | default_errors }}
+      <ul>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="contact[name]" id="name" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="contact[email]" id="email" placeholder="Enter your mail id">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="contact[message]" id="message" placeholder="Type your thoughts here"></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="submitbtn">
+            <input type="submit" value="Create" onclick="showAlert()">
+          </div>
+        </div>
+      </ul>
+    {% endform %}
+  </div>
+
+  <script>
+    function showAlert() {
+      alert("Your Information sent to shop owner, Thank You for sharing :)");
+    }
+  </script>
+</div>

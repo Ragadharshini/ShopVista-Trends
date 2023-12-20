@@ -1,0 +1,31 @@
+<!-- cart.liquid -->
+{% form 'cart', cart %}
+  <div class="cart-container">
+    <h2>Cart</h2>
+
+    {% if cart.empty? %}
+      <p class="cart-empty">Your cart is empty!</p>
+    {% else %}
+      {% for item in cart.items %}
+        <div class="cart-item">
+          <img src="{{ item.image | image_url: width:100 }}" alt="{{ item.title }}">
+          <div class="cart-item-details">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.price | money }}</p>
+            <input name="updates[]" value="{{ item.quantity }}">
+            <a href="{{ item.url_to_remove }}">Remove</a>
+          </div>
+        </div>
+      {% endfor %}
+
+      <hr>
+
+      <p class="cart-total">Total: {{ cart.total_price | money }}</p>
+
+      <div class="cart-buttons">
+        <button type="submit" name="update">Update</button>
+        <button type="submit" name="checkout" class="checkout-button">Checkout</button>
+      </div>
+    {% endif %}
+  </div>
+{% endform %}

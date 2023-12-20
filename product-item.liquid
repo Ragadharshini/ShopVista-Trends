@@ -1,0 +1,9 @@
+<!-- product-item.liquid -->
+
+<div class="product-item">
+  <a href="{{ product.url }}">
+    <img src="{{ product.featured_image | image_url : width: 400 }}">
+    <h2>{{ product.title }}</h2>
+    Price : {{ product.price | money }}
+  </a>
+</div>

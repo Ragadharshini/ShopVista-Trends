@@ -1,0 +1,18 @@
+<!-- This file is responsible for displaying a list of products from the 'frontpage' collection. -->
+
+<h1>{{ collections.frontpage.title }}</h1>
+
+<!--
+  - https://shopify.dev/docs/api/liquid/objects/collection ,
+  then go to access specific collection -
+-->
+{% for product in collections.frontpage.products %}
+  <!-- Go to collections->home page->see search engine and handle and take last word (here frontpage) -->
+
+  {% render 'product-item', product: product %}
+{% endfor %}
+
+<!--
+  index.liquid allows you to display a list of products from the 'frontpage' collection on your storefront,
+  with each product being styled and structured according to the content defined in product-item.liquid.
+-->

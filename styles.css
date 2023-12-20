@@ -1,0 +1,442 @@
+/* styles.css */
+
+/* BODY */
+body {
+  background-color: black;
+  text-align: center;
+  margin: 0;
+  color: white;
+  min-height: 100vh; /* Set minimum height to full viewport height */
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+body {
+  font-family: Papyrus, Fantasy;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1; /* Allow main content to grow and fill available space */
+}
+
+body a {
+  color: white; /* Change anchor color in the body */
+  
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #B4BDFF;
+  color: black;
+  display : block;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: auto;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Paginate */
+
+.horizontal-products {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+}
+
+.horizontal-product-item {
+  flex: 0 0 auto; /* Prevent items from growing to fill available space */
+  margin-right: 20px; /* Adjust as needed for spacing between items */
+}
+
+/* HEADER */
+header {
+  background-color: #B4BDFF;
+  padding: 1rem;
+  color: black;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem; /* Adjust font size as needed */
+  color: black;
+}
+
+.header-content .linklists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header-content .linklists li {
+  margin-left: 40px; /* Adjust left margin */
+  margin-right: 40px; /* Adjust right margin */
+  font-size: 20px; /* Adjust font size as needed */
+  text-align: center;
+}
+
+.header-content .linklists a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem; /* Increase font size for links */
+  transition: color 0.3s; /* Add transition effect for color change */
+}
+
+.header-content .linklists a:hover {
+  color: white; /* Change color on hover */
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="search"] {
+  padding: 0.5rem;
+  margin-right: 10px;
+  border-radius: 15px;
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+ button {
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: #B4BDFF ;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+button:hover {
+  background-color:white;
+  color: black;
+}
+
+.searchbtn:hover{
+  background-color: #FDEFF4 ;
+  color: black;
+}
+
+
+/* PRODUCT ITEM */
+
+.product-item {
+  background-color: black;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center;
+}
+
+.product-item img {
+  margin-bottom: 10px;
+  max-width: 100%;
+  max-height:100%;
+}
+
+.product-item a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s; /* Add transition effect for color change */
+}
+
+.product-item a:hover {
+  color: #B4BDFF; /* Change color on hover */
+}
+
+.product-item h2 {
+  margin: 10px 0;
+}
+
+.product-item p {
+  margin: 5px 0;
+  color: #ACFADF; /* Adjust text color */
+}
+
+/* PRODUCT */
+
+.product-container {
+  display: flex;
+  padding: 90px; /* Add padding around the entire product container */
+}
+
+.product-image {
+  flex: 0 0 auto; /* Prevent the image from growing to fill available space */
+  margin-right: 20px; /* Add space between image and details */
+  padding: 40px;
+}
+
+.product-details {
+  text-align:left;
+  position: relative; 
+  right: 5px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.product-detail-first{
+  padding-bottom: 15px;
+}
+
+.product-details button{
+  border-radius:50px;
+  font-size: 15px; /* Adjust font size as needed */
+  background-color:white;
+  color: black;  
+}
+button:hover {
+  background-color: #16FF00 ;
+  color: black;
+}
+
+.cartbtn {
+  padding-top: 15px;
+  position: relative;
+  top: 65px;
+  right: 100px;
+}
+
+.pagination-container{
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+
+/* CART */
+
+.cart-container {
+  padding: 10 20 20 20;
+  margin: 20px;
+  position: relative;
+  left: 400px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.cart-container h2{
+  text-align:center;
+  font-family: Papyrus, Fantasy;
+}
+
+.cart-empty{
+  text-align:center;
+  font-size:2rem;
+  font-family: Papyrus, Fantasy;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-item img {
+  width: 150px;
+  height: 90px;
+  margin-right: 40px;
+  
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cart-item-details p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.cart-item-details input {
+  width: 40px;
+}
+
+.cart-item-details a {
+  margin-left: 10px;
+  color: #FF0000; /* Adjust the color as needed */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.cart-item-details a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+.cart-total {
+  padding: 20px;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #000;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.cart-buttons button:hover {
+  color: red;
+}
+.cart-buttons button.checkout-button {
+  background-color: #4CAF50; /* Green color for checkout button */
+}
+
+.cart-buttons button.checkout-button:hover {
+  background-color: white; /* Change color on hover */
+  color: black; /* Change text color on hover */
+}
+
+/*CONTACT */
+
+.contact-content {
+  color: #EEEEEE;
+  padding: 15px;
+  background-color: #262A56;
+  font-size: 1rem;
+  text-align:left;
+  
+}
+
+.page-container {
+  padding: 20px;
+  margin: 20px;
+ 
+}
+
+.page-container h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+
+.form-container {
+  max-width: 600px; /* Set the maximum width of the form container */
+  margin: 0 auto; /* Center the form horizontally */
+  position:relative;
+  left: 90px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #B4BDFF;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
+  text-align: left; 
+  padding: 10px;
+  
+}
+
+
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group textarea {
+  width: 200%;
+  padding: 15px; /* Increase padding for height */
+  margin: 10px 0;
+  border: 1px solid #B4BDFF;
+  border-radius: 5px;
+  background-color: #000;
+  color: white;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+.submitbtn{
+  padding: 20px;
+  
+}
+.form-group input[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  position: relative;
+  left: 100px;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #4CAF50;
+}
+
+/*SEARCH */
+
+.search-results {
+  margin: 20px;
+}
+
+.result-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.result-item a {
+  text-decoration: none;
+  color:white;
+}
+
+.result-item a:hover {
+  color: #B4BDFF;
+}
+
+.result-item:hover {
+  transform: scale(0.9);
+}
+
+.result-item h2 {
+  margin-bottom: 10px;
+}
+
+.result-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.no-results {
+  margin: 20px;
+}
+
+.pagination {
+  margin: 20px;
+}
+
+
