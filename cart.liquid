@@ -1,7 +1,7 @@
 <!-- cart.liquid -->
 {% form 'cart', cart %}
   <div class="cart-container">
-    <h2>Cart</h2>
+    <h1 style="font-size: 40px; padding-bottom: 30px;">Cart</h1>
 
     {% if cart.empty? %}
       <p class="cart-empty">Your cart is empty!</p>
@@ -29,3 +29,4 @@
     {% endif %}
   </div>
 {% endform %}
+
